@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anjana P | MERN Stack Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Basic Topbar styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar nav a {
+            color: white;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navbar nav a:hover {
+            color: #38bdf8;
+        }
+
+        body {
+            scroll-behavior: smooth;
+            padding-top: 80px;
+            /* to avoid content hidden behind fixed topbar */
+        }
+
+        .resume-section {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .resume-btn {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .resume-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= TOPBAR ================= -->
+    <div class="navbar">
+        <div class="logo"> </div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+
+        <img src="assets/me.jpeg" class="profile-img" />
+
+        <h1>Hi, I’m <span>Anjana P</span></h1>
+        <p class="role">MERN Stack Developer</p>
+        <p class="summary">
+            MERN Stack Developer with 2+ years of experience building scalable web applications and
+            modern user interfaces using React, Next.js, Node.js, and MongoDB.
+        </p>
+
+        <div class="mern-icons">
+            <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+            </div>
+            <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg">
+            </div>
+            <div class="icon"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"> </div>
+            <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+            </div>
+            <div class="icon"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"></div>
+            <div class="icon"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"></div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="skills-exp-wrapper" id="skills">
+        <div class="skills-column">
+            <h2>Skills</h2>
+
+            <div class="skills-tags">
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>React.js</span>
+                <span>Next.js</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>REST API</span>
+                <span>Zustand</span>
+                <span>Material UI (MUI)</span>
+                <span>Ant Design</span>
+                <span>Tailwind CSS</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JWT Authentication</span>
+                <span>MongoDB</span>
+                <span>Aggregations</span>
+                <span>Cloudinary</span>
+                <span>Socket.IO</span>
+                <span>Stripe</span>
+                <span>Razorpay</span>
+                <span>Firebase</span>
+                <span>Git & GitHub</span>
+                <span>Postman</span>
+                <span>CI/CD Pipelines</span>
+                <span>Clean Architecture</span>
+                <span>MVC Architecture</span>
+                <span>State Management</span>
+                <span>Debugging</span>
+                <span>Performance Optimization</span>
+                <span>UI/UX Design</span>
+                <span>Design Thinking</span>
+                <span>Problem Solving</span>
+                <span>+ More</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="project-showcase" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <!-- PROJECT 1 -->
+        <div class="project-card-ui" onclick="openProject('sailor')">
+            <div class="project-content">
+                <h3>Sailor – Hybrid Cloud Platform</h3>
+                <p class="subtitle">SaaS · Frontend Development</p>
+                <p class="desc">
+                    Hybrid cloud orchestration platform enabling self-service using blueprints.
+                </p>
+                <span class="tech">
+                    Next.js · TypeScript · React · MUI · Golang
+                </span>
+            </div>
+            <div class="project-images double">
+                <img src="assets/sailor1.png" alt="Sailor UI">
+            </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card-ui" onclick="openProject('bootlabs')">
+            <div class="project-content">
+                <h3>Bootlabs – HR ATS Platform</h3>
+                <p class="subtitle">HR Management · Frontend Development</p>
+                <p class="desc">
+                    HR Applicant Tracking System with AI-powered candidate screening and interview management.
+                </p>
+                <span class="tech">
+                    Next.js · TypeScript · Tailwind CSS · Ant Design
+                </span>
+            </div>
+            <div class="project-images double">
+                <img src="assets/hr2.png" alt="Bootlabs UI">
+            </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card-ui" onclick="openProject('mahindra')">
+            <div class="project-content">
+                <h3>Mahindra – Crash Test Management System</h3>
+                <p class="subtitle">Web Application · Frontend Development</p>
+                <p class="desc">
+                    Web-based system for managing crash test workflows, reports, and analytics.
+                </p>
+                <span class="tech">
+                    React · Next.js · MUI · React Hook Form · Zod
+                </span>
+            </div>
+            <div class="project-images double">
+                <img src="assets/mahi1.png" alt="Mahindra UI">
+            </div>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="project-card-ui" onclick="openProject('bookinn')">
+            <div class="project-content">
+                <h3>BookInn – Hotel Booking Platform</h3>
+                <p class="subtitle">Full Stack Web Application</p>
+                <p class="desc">
+                    A complete hotel booking platform for users and hotel owners with secure payments and real-time
+                    features.
+                </p>
+                <span class="tech">
+                    React · Node.js · MongoDB · Stripe · Socket.IO
+                </span>
+            </div>
+            <div class="project-images double">
+                <img src="assets/book2.png" alt="BookInn UI">
+            </div>
+        </div>
+
+        <!-- PROJECT 5 -->
+        <div class="project-card-ui" onclick="openProject('shoeky')">
+            <div class="project-content">
+                <h3>ShoeKy – E-Commerce Platform</h3>
+                <p class="subtitle">E-Commerce Web Application</p>
+                <p class="desc">
+                    A full-featured e-commerce platform for Nike shoes with secure payments,
+                    authentication, and order management.
+                </p>
+                <span class="tech">
+                    Node.js · Express · MongoDB · Razorpay · Passport.js
+                </span>
+            </div>
+            <div class="project-images double">
+                <img src="assets/shoe1.jpeg" alt="ShoeKy UI">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ================= RESUME ================= -->
+ 
+<section class="resume-section" id="resume">
+  <h2>Resume</h2>
+
+  <br>
+  <p>My Experience, Projects, and Education:</p>
+
+  <div class="timeline">
+
+    <!-- EXPERIENCE 1 -->
+    <div class="timeline-item">
+      <h3>Software Engineer — Bootlabs</h3>
+      <span class="timeline-date">Nov 2024 – Present</span>
+      <p>Bootlabs is a product company specializing in cloud orchestration and AI-driven platforms.</p>
+      <ul>
+        <li>Contributed to Sailor, a hybrid-cloud orchestration SaaS platform enabling self-service using well-architected blueprints.</li>
+     
+      </ul>
+    </div>
+
+    <!-- EXPERIENCE 2 -->
+    <div class="timeline-item">
+      <h3>Mahindra — Crash Test Management System</h3>
+      <ul>
+        <li>Built a complete responsive UI using React/Next.js for all crash-test workflows.</li>
+      
+      </ul>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="timeline-item">
+      <h3>Projects</h3>
+      <ul>
+        <li><strong>BookInn — Hotel Booking Website:</strong> Google + Email authentication using JWT, Real-time chat with Socket.IO, Secure payments with Stripe. Tech: Node.js, React.js, Redux, Express, MongoDB, Tailwind CSS.</li>
+        <li><strong>ShoeKy — E-Commerce Platform:</strong> User login with Passport.js and OTP via Nodemailer, Payment gateway with Razorpay, Invoice generation using PDFKit, Product and coupon management with Multer.</li>
+      </ul>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="timeline-item">
+      <h3>Education</h3>
+      <ul>
+        <li>Master of Computer Applications (MCA) — Indira Gandhi National Open University (IGNOU), Jan 2024 – Jan 2026</li>
+        <li>MERN Stack Development — Brototype, Ernakulam, 2023 – 2024</li>
+        <li>Bachelor of Computer Application (BCA) — Ideal College for Advanced Studies</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Download Resume -->
+  <a href="assets/anjana.pdf" download class="resume-btn">
+    <i class="fa-solid fa-download"></i> Download Resume
+  </a>
+</section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+
+        <form action="https://formsubmit.co/anjananjana8@gmail.com" method="POST" class="contact-form">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Contact Message">
+            <input type="hidden" name="_replyto" value="{{email}}">
+
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="hire-btn">Send Message</button>
+        </form>
+
+    </section>
+
+    <script>
+        function openProject(projectName) {
+            window.location.href = `project-details.html?project=${projectName}`;
+        }
+    </script>
+
+</body>
+
+</html>
