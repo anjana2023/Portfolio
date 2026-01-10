@@ -4,28 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Anjana P | MERN Stack Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* ===== Global Styles ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background: #0f0f1e;
-            color: #fff;
-            scroll-behavior: smooth;
-            padding-top: 80px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        /* ===== Navbar ===== */
+        /* Basic Topbar styles */
         .navbar {
             position: fixed;
             top: 0;
@@ -34,8 +17,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
         }
 
         .navbar nav a {
@@ -49,167 +38,15 @@
             color: #38bdf8;
         }
 
-        /* ===== Hero Section ===== */
-        .hero {
-            text-align: center;
-            padding: 80px 20px 100px;
+        body {
+            scroll-behavior: smooth;
+            padding-top: 80px;
+            /* to avoid content hidden behind fixed topbar */
         }
 
-        .hero .profile-img {
-            width: 160px;
-            border-radius: 50%;
-            border: 4px solid #38bdf8;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .hero span {
-            color: #38bdf8;
-        }
-
-        .hero .role {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #cbd5f5;
-        }
-
-        .hero .summary {
-            max-width: 600px;
-            margin: auto;
-            color: #cbd5f5;
-            line-height: 1.6;
-        }
-
-        .mern-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            gap: 15px;
-        }
-
-        .mern-icons .icon img {
-            width: 40px;
-            height: 40px;
-        }
-
-        /* ===== Skills Section ===== */
-        .skills-exp-wrapper {
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .skills-exp-wrapper h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-        }
-
-        .skills-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .skills-tags span {
-            background: #1f2937;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            color: #fff;
-        }
-
-        /* ===== Projects Section ===== */
-        .project-showcase {
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-
-        .project-card-ui {
-            display: flex;
-            justify-content: space-between;
-            background: #1f2937;
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .project-card-ui:hover {
-            background: #2c3e50;
-        }
-
-        .project-content {
-            max-width: 60%;
-            text-align: left;
-        }
-
-        .project-content h3 {
-            margin-bottom: 8px;
-            font-size: 1.5rem;
-        }
-
-        .project-content .subtitle {
-            font-size: 0.95rem;
-            color: #38bdf8;
-            margin-bottom: 10px;
-        }
-
-        .project-content .desc {
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            color: #cbd5f5;
-        }
-
-        .project-content .tech {
-            font-size: 0.85rem;
-            color: #9ca3af;
-        }
-
-        .project-images img {
-            width: 200px;
-            border-radius: 10px;
-            margin-left: 20px;
-        }
-
-        /* ===== Resume Section ===== */
         .resume-section {
-            padding: 80px 20px;
             text-align: center;
-        }
-
-        .resume-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .timeline {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: left;
-        }
-
-        .timeline-item {
-            margin-bottom: 30px;
-        }
-
-        .timeline-item h3 {
-            color: #38bdf8;
-            margin-bottom: 5px;
-        }
-
-        .timeline-date {
-            font-size: 0.85rem;
-            color: #9ca3af;
+            padding: 4rem 2rem;
         }
 
         .resume-btn {
@@ -227,107 +64,14 @@
         .resume-btn:hover {
             background: #0056b3;
         }
-
-        /* ===== Contact Section ===== */
-        .contact {
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 500px;
-            margin: auto;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 10px 15px;
-            border-radius: 5px;
-            border: none;
-            outline: none;
-        }
-
-        .hire-btn {
-            padding: 12px 20px;
-            background: #38bdf8;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-            transition: 0.3s;
-        }
-
-        .hire-btn:hover {
-            background: #0ea5e9;
-        }
-
-        /* ===== Project Details ===== */
-        .project-details-section {
-            display: none;
-            padding: 50px 20px;
-            background: #020617;
-        }
-
-        .project-details h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .project-details p,
-        .project-details span {
-            margin-bottom: 15px;
-        }
-
-        .project-details img {
-            width: 100%;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        /* Lightbox */
-        #lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.9);
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-
-        #lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-        }
-
-        @media screen and (max-width: 768px) {
-            .project-card-ui {
-                flex-direction: column;
-            }
-
-            .project-content {
-                max-width: 100%;
-            }
-
-            .project-images img {
-                width: 100%;
-                margin-left: 0;
-                margin-top: 15px;
-            }
-        }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <!-- ================= TOPBAR ================= -->
     <div class="navbar">
-        <div class="logo">Anjana P</div>
+        <div> </div>
         <nav>
             <a href="#hero">Home</a>
             <a href="#skills">Skills</a>
@@ -337,15 +81,19 @@
         </nav>
     </div>
 
-    <!-- Hero Section -->
+    <!-- ================= HERO ================= -->
     <section class="hero" id="hero">
-        <img src="assets/img/me.jpeg" class="profile-img" />
+        <div class="hero-bg"></div>
+
+        <img src="assets/me.jpeg" class="profile-img" />
+
         <h1>Hi, I’m <span>Anjana P</span></h1>
         <p class="role">MERN Stack Developer</p>
         <p class="summary">
             MERN Stack Developer with 2+ years of experience building scalable web applications and
             modern user interfaces using React, Next.js, Node.js, and MongoDB.
         </p>
+
         <div class="mern-icons">
             <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"></div>
             <div class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"></div>
@@ -356,194 +104,258 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ================= SOCIAL LINKS ================= -->
+<section class="social-links-section">
+    <a href="https://github.com/anjana2023" target="_blank" class="social-link">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/anjana-p-447534243/" target="_blank" class="social-link">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+    </a>
+
+    <a href="https://leetcode.com/u/anjana800/" target="_blank" class="social-link">
+        <i class="fa-solid fa-code"></i>
+        <span>LeetCode</span>
+    </a>
+</section>
+
+
+    <!-- ================= SKILLS ================= -->
     <section class="skills-exp-wrapper" id="skills">
-        <h2>Skills</h2>
-        <div class="skills-tags">
-            <span>JavaScript</span><span>TypeScript</span><span>React.js</span><span>Next.js</span><span>Node.js</span>
-            <span>Express.js</span><span>REST API</span><span>Zustand</span><span>Material UI</span><span>Ant Design</span>
-            <span>Tailwind CSS</span><span>HTML</span><span>CSS</span><span>JWT Auth</span><span>MongoDB</span>
-            <span>Cloudinary</span><span>Socket.IO</span><span>Stripe</span><span>Razorpay</span><span>Firebase</span>
-            <span>Git & GitHub</span><span>Postman</span><span>CI/CD</span><span>MVC Architecture</span>
-            <span>State Management</span><span>Debugging</span><span>Performance Optimization</span><span>UI/UX Design</span>
+        <div class="skills-column">
+            <h2>Skills</h2>
+
+            <div class="skills-tags">
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>React.js</span>
+                <span>Next.js</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>REST API</span>
+                <span>Zustand</span>
+                <span>Material UI (MUI)</span>
+                <span>Ant Design</span>
+                <span>Tailwind CSS</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JWT Authentication</span>
+                <span>MongoDB</span>
+                <span>Aggregations</span>
+                <span>Cloudinary</span>
+                <span>Socket.IO</span>
+                <span>Stripe</span>
+                <span>Razorpay</span>
+                <span>Firebase</span>
+                <span>Git & GitHub</span>
+                <span>Postman</span>
+                <span>CI/CD Pipelines</span>
+                <span>Clean Architecture</span>
+                <span>MVC Architecture</span>
+                <span>State Management</span>
+                <span>Debugging</span>
+                <span>Performance Optimization</span>
+                <span>UI/UX Design</span>
+                <span>Design Thinking</span>
+                <span>Problem Solving</span>
+                <span>+ More</span>
+            </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ================= PROJECTS ================= -->
     <section class="project-showcase" id="projects">
         <h2 class="section-title">Projects</h2>
+
+        <!-- PROJECT 1 -->
         <div class="project-card-ui" onclick="openProject('sailor')">
             <div class="project-content">
                 <h3>Sailor – Hybrid Cloud Platform</h3>
                 <p class="subtitle">SaaS · Frontend Development</p>
-                <p class="desc">Hybrid cloud orchestration platform enabling self-service using blueprints.</p>
-                <span class="tech">Next.js · TypeScript · React · MUI · Golang</span>
+             <p class="desc">
+    A scalable hybrid cloud orchestration SaaS that enables enterprises to provision and manage
+    infrastructure using reusable blueprints. Focused on usability, performance optimization,
+    and enterprise-grade UI workflows.
+</p>
+
+                <span class="tech">
+                    Next.js · TypeScript · React · MUI · Golang
+                </span>
             </div>
-            <div class="project-images"><img src="assets/img/sailor1.png" alt="Sailor UI"></div>
+            <div class="project-images">
+                <img src="assets/sailor1.png" alt="Sailor UI">
+            </div>
         </div>
+
+        <!-- PROJECT 2 -->
         <div class="project-card-ui" onclick="openProject('bootlabs')">
             <div class="project-content">
                 <h3>Bootlabs – HR ATS Platform</h3>
                 <p class="subtitle">HR Management · Frontend Development</p>
-                <p class="desc">HR Applicant Tracking System with AI-powered candidate screening and interview management.</p>
-                <span class="tech">Next.js · TypeScript · Tailwind CSS · Ant Design</span>
+              <p class="desc">
+    An AI-powered Applicant Tracking System that streamlines hiring workflows including candidate
+    screening, interview scheduling, offer management, and analytics dashboards for HR teams.
+</p>
+
+                <span class="tech">
+                    Next.js · TypeScript · Tailwind CSS · Ant Design
+                </span>
             </div>
-            <div class="project-images"><img src="assets/img/hr2.png" alt="Bootlabs UI"></div>
+            <div class="project-images double">
+                <img src="assets/hr2.png" alt="Bootlabs UI">
+            </div>
         </div>
+
+        <!-- PROJECT 3 -->
         <div class="project-card-ui" onclick="openProject('mahindra')">
             <div class="project-content">
                 <h3>Mahindra – Crash Test Management System</h3>
                 <p class="subtitle">Web Application · Frontend Development</p>
-                <p class="desc">Web-based system for managing crash test workflows, reports, and analytics.</p>
-                <span class="tech">React · Next.js · MUI · React Hook Form · Zod</span>
+               <p class="desc">
+    An internal web application for managing automotive crash test processes, reports, and
+    performance analytics with highly structured workflows and role-based UI access.
+</p>
+
+                <span class="tech">
+                    React · Next.js · MUI · React Hook Form · Zod
+                </span>
             </div>
-            <div class="project-images"><img src="assets/img/mahi1.png" alt="Mahindra UI"></div>
+            <div class="project-images double">
+                <img src="assets/mahi1.png" alt="Mahindra UI">
+            </div>
         </div>
+
+        <!-- PROJECT 4 -->
         <div class="project-card-ui" onclick="openProject('bookinn')">
             <div class="project-content">
                 <h3>BookInn – Hotel Booking Platform</h3>
                 <p class="subtitle">Full Stack Web Application</p>
-                <p class="desc">A complete hotel booking platform for users and hotel owners with secure payments and real-time features.</p>
-                <span class="tech">React · Node.js · MongoDB · Stripe · Socket.IO</span>
+               <p class="desc">
+    A full-stack hotel booking platform for users and hotel owners featuring secure authentication,
+    real-time chat, booking management, and seamless payment integrations.
+</p>
+
+                <span class="tech">
+                    React · Node.js · MongoDB · Stripe · Socket.IO
+                </span>
             </div>
-            <div class="project-images"><img src="assets/img/book2.png" alt="BookInn UI"></div>
+            <div class="project-images double">
+                <img src="assets/book2.png" alt="BookInn UI">
+            </div>
         </div>
+
+        <!-- PROJECT 5 -->
         <div class="project-card-ui" onclick="openProject('shoeky')">
             <div class="project-content">
                 <h3>ShoeKy – E-Commerce Platform</h3>
                 <p class="subtitle">E-Commerce Web Application</p>
-                <p class="desc">A full-featured e-commerce platform for Nike shoes with secure payments, authentication, and order management.</p>
-                <span class="tech">Node.js · Express · MongoDB · Razorpay · Passport.js</span>
+                <p class="desc">
+                    A full-featured e-commerce platform for Nike shoes with secure payments,
+                    authentication, and order management.
+                </p>
+                <span class="tech">
+                    Node.js · Express · MongoDB · Razorpay · Passport.js
+                </span>
             </div>
-            <div class="project-images"><img src="assets/img/shoe1.jpeg" alt="ShoeKy UI"></div>
+            <div class="project-images double">
+                <img src="assets/shoe1.jpeg" alt="ShoeKy UI">
+            </div>
         </div>
+
     </section>
 
-    <!-- Resume Section -->
+    <!-- ================= RESUME ================= -->
+
     <section class="resume-section" id="resume">
         <h2>Resume</h2>
+
+        <br>
+        <p>My Experience, Projects, and Education:</p>
+
         <div class="timeline">
+
+            <!-- EXPERIENCE 1 -->
             <div class="timeline-item">
                 <h3>Software Engineer — Bootlabs</h3>
                 <span class="timeline-date">Nov 2024 – Present</span>
                 <p>Bootlabs is a product company specializing in cloud orchestration and AI-driven platforms.</p>
+                <ul>
+                    <li>Contributed to Sailor, a hybrid-cloud orchestration SaaS platform enabling self-service using
+                        well-architected blueprints.</li>
+
+                </ul>
             </div>
+
+            <!-- EXPERIENCE 2 -->
             <div class="timeline-item">
                 <h3>Mahindra — Crash Test Management System</h3>
-                <p>Built a complete responsive UI using React/Next.js for all crash-test workflows.</p>
+                <ul>
+                    <li>Built a complete responsive UI using React/Next.js for all crash-test workflows.</li>
+
+                </ul>
             </div>
+
+            <!-- PROJECTS -->
+            <div class="timeline-item">
+                <h3>Projects</h3>
+                <ul>
+                    <li><strong>BookInn — Hotel Booking Website:</strong> Google + Email authentication using JWT,
+                        Real-time chat with Socket.IO, Secure payments with Stripe. Tech: Node.js, React.js, Redux,
+                        Express, MongoDB, Tailwind CSS.</li>
+                    <li><strong>ShoeKy — E-Commerce Platform:</strong> User login with Passport.js and OTP via
+                        Nodemailer, Payment gateway with Razorpay, Invoice generation using PDFKit, Product and coupon
+                        management with Multer.</li>
+                </ul>
+            </div>
+
+            <!-- EDUCATION -->
             <div class="timeline-item">
                 <h3>Education</h3>
                 <ul>
-                    <li>MCA — IGNOU (Jan 2024 – Jan 2026)</li>
-                    <li>MERN Stack Development — Brototype (2023 – 2024)</li>
-                    <li>BCA — Ideal College for Advanced Studies</li>
+                    <li>Master of Computer Applications (MCA) — Indira Gandhi National Open University (IGNOU), Jan 2024
+                        – Jan 2026</li>
+                    <li>MERN Stack Development — Brototype, Ernakulam, 2023 – 2024</li>
+                    <li>Bachelor of Computer Application (BCA) — Ideal College for Advanced Studies</li>
                 </ul>
             </div>
+
         </div>
-        <a href="assets/img/anjana.pdf" download class="resume-btn"><i class="fa-solid fa-download"></i> Download Resume</a>
+
+        <!-- Download Resume -->
+        <a href="assets/anjana_new_cv.pdf" download class="resume-btn">
+            <i class="fa-solid fa-download"></i> Download Resume
+        </a>
     </section>
 
-    <!-- Contact Section -->
+
+    <!-- ================= CONTACT ================= -->
     <section class="contact" id="contact">
         <h2>Contact Me</h2>
+
         <form action="https://formsubmit.co/anjananjana8@gmail.com" method="POST" class="contact-form">
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Contact Message">
+            <input type="hidden" name="_replyto" value="{{email}}">
+
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
             <button type="submit" class="hire-btn">Send Message</button>
         </form>
+
     </section>
 
-    <!-- Project Details Section -->
-    <section class="project-details-section" id="project-details">
-        <div class="project-details">
-            <h1 id="title"></h1>
-            <p class="subtitle" id="subtitle"></p>
-            <p class="desc" id="description"></p>
-            <span class="tech" id="tech"></span>
-            <div class="project-images" id="images" style="display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:20px;"></div>
-        </div>
-        <div id="lightbox" onclick="closeLightbox()">
-            <img id="lightbox-img">
-        </div>
-    </section>
-
-    <!-- ===== JavaScript ===== -->
     <script>
-        const projects = {
-            sailor: {
-                title: "Sailor – Hybrid Cloud Orchestration Platform",
-                subtitle: "SaaS Platform · Frontend Development",
-                description: `<p>Contributed to <strong>Sailor</strong>, a hybrid-cloud orchestration SaaS platform.</p>`,
-                tech: "Next.js · TypeScript · React · Zustand · MUI · Golang · MongoDB",
-                images: ["assets/img/sailor1.png", "assets/img/sailor2.png", "assets/img/sailor3.png"]
-            },
-            bootlabs: {
-                title: "Bootlabs – HR ATS Platform",
-                subtitle: "HR Management System · Frontend Development",
-                description: `<p>Bootlabs is a modern HR ATS platform for hiring workflows.</p>`,
-                tech: "Next.js · TypeScript · Tailwind CSS · Ant Design",
-                images: ["assets/img/hr1.png", "assets/img/hr2.png", "assets/img/hr3.png"]
-            },
-            mahindra: {
-                title: "Mahindra – Crash Test Management System",
-                subtitle: "Web App · Frontend Development",
-                description: `<p>Crash Test Management System for Mahindra to manage workflows efficiently.</p>`,
-                tech: "React · Next.js · MUI · React Hook Form · Zod",
-                images: ["assets/img/mahi1.png", "assets/img/mahi2.png", "assets/img/mahi3.png"]
-            },
-            bookinn: {
-                title: "BookInn – Hotel Booking Platform",
-                subtitle: "Full Stack Web Application",
-                description: `<p>Hotel booking platform with secure payments and real-time features.</p>`,
-                tech: "React · Node.js · MongoDB · Stripe · Socket.IO",
-                images: ["assets/img/book2.png", "assets/img/book3.png", "assets/img/book4.png"]
-            },
-            shoeky: {
-                title: "ShoeKy – E-Commerce Platform",
-                subtitle: "Online Shoe Store · Full Stack Development",
-                description: `<p>ShoeKy is an e-commerce platform for Nike shoes with secure authentication and payments.</p>`,
-                tech: "Node.js · Express · MongoDB · Passport.js · Razorpay · PDFKit · Multer",
-                images: ["assets/img/shoe1.jpeg", "assets/img/shoe2.jpeg", "assets/img/shoe3.jpeg"]
-            }
-        };
-
-        function openProject(key) {
-            const p = projects[key];
-            if (!p) return;
-
-            document.getElementById('hero').style.display = 'none';
-            document.getElementById('skills').style.display = 'none';
-            document.getElementById('projects').style.display = 'none';
-            document.getElementById('resume').style.display = 'none';
-            document.getElementById('contact').style.display = 'none';
-            document.getElementById('project-details').style.display = 'block';
-
-            document.getElementById("title").innerHTML = p.title;
-            document.getElementById("subtitle").innerHTML = p.subtitle;
-            document.getElementById("description").innerHTML = p.description;
-            document.getElementById("tech").innerHTML = p.tech;
-
-            const imgContainer = document.getElementById("images");
-            imgContainer.innerHTML = '';
-            p.images.forEach(img => {
-                const image = document.createElement("img");
-                image.src = img;
-                image.onclick = () => openLightbox(image);
-                imgContainer.appendChild(image);
-            });
-        }
-
-        function openLightbox(img) {
-            document.getElementById("lightbox-img").src = img.src;
-            document.getElementById("lightbox").style.display = "flex";
-        }
-
-        function closeLightbox() {
-            document.getElementById("lightbox").style.display = "none";
+        function openProject(projectName) {
+            window.location.href = `project-details.html?project=${projectName}`;
         }
     </script>
+
 </body>
+
 </html>
