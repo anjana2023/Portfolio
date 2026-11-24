@@ -130,7 +130,6 @@ export default function HeroVisual() {
       {/* colour wash */}
       <div className="absolute inset-[6%] rounded-full bg-gradient-to-br from-ember/25 via-pink/15 to-lime/25 blur-3xl" />
 
-      {/* dot grid, faded toward the edges */}
       <div
         className="absolute inset-0 opacity-60"
         style={{

@@ -54,6 +54,7 @@ export default function Navbar() {
           Open to UAE roles
         </p>
       </div>
+      
     </header>
   );
 }

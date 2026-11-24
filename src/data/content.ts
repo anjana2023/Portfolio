@@ -37,8 +37,6 @@ export type Project = {
 };
 
 // Order of `shots`: [main (large), side (top-right), small (bottom-left)].
-const B = "https://anjanaworks-dev.vercel.app";
-
 export const projects: Project[] = [
   { 
     index: "01",
@@ -50,7 +48,11 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Zustand", "Material UI", "MongoDB"],
     accent: "oklch(0.75 0.16 230)",
     glow: "oklch(0.75 0.16 230 / 0.38)",
-    shots: [`${B}/sailor/marketplace.png`, `${B}/sailor/costMngnt.png`, `${B}/sailor/basic.png`],
+    shots: [
+      "/projects/5.png",
+      "/projects/6.png",
+      "/projects/costManagement.png",
+    ],
   },
   {
     index: "02",
@@ -62,7 +64,11 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Python", "FastAPI", "MongoDB"],
     accent: "oklch(0.88 0.2 125)",
     glow: "oklch(0.88 0.2 125 / 0.32)",
-    shots: [`${B}/hragent/2.png`, `${B}/hragent/1.png`, `${B}/hragent/3.png`],
+    shots: [
+      "/projects/1.png",
+      "/projects/2.png",
+      "/projects/3.png",
+    ],
   },
   {
     index: "03",
